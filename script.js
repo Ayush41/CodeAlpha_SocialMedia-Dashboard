@@ -9,3 +9,11 @@ checkbox.addEventListener("change", function () {
     document.documentElement.setAttribute("data-theme", "light");
   }
 });
+
+let trans = () => {
+  console.log(document.documentElement);
+  document.documentElement.classList.add("transition");
+  window.setTimeout(() => {
+    document.documentElement.classList.remove("transition");
+  }, 1000);
+};
